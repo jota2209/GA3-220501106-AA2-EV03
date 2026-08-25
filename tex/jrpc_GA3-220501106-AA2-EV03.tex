@@ -1,0 +1,65 @@
+\input{preambulo}
+
+\begin{document}
+	
+	\input{portada}
+
+	\newpage
+	\setstretch{1.15}
+	\tableofcontents
+	\newpage
+	\doublespacing
+	
+	% --- INTRODUCCIÓN ---
+	\section{Introducción}
+	El presente documento constituye la bitácora de administración y supervisión de los servicios de Tecnologías de la Información (TI) para la empresa \textbf{Alliance Technology Group}, un BPO de Contact Center localizado en la ciudad de Cali, Valle del Cauca de alta exigencia operativa. En este tipo de organizaciones, la disponibilidad de los servicios, la ciberseguridad y la gestión eficiente de los incidentes son pilares fundamentales para garantizar la continuidad del negocio y el cumplimiento de los Acuerdos de Nivel de Servicio (SLA) establecidos con los diferentes clientes que contratan las campañas \parencite{sena2026redes}.
+	
+	Para lograr un control óptimo y mitigar los impactos negativos frente a cualquier eventualidad, el departamento de TI emplea un ecosistema robusto de herramientas tecnológicas (Fortigate, ServiceDesk Plus, Snipe-IT, Wazuh, Directorio Activo, Action1, UpTimeRobot y PRTG), las cuales permiten centralizar desde la monitorización del hardware y la red hasta la gestión de identidades y la mesa de ayuda \parencite{sena2026servidores}.
+	
+	\section{Identificación de Buenas Prácticas de Gestión de Servicios TI}
+	Alineados con estándares internacionales como ITIL y los principios de ciberseguridad corporativa, en Alliance Technology Group se aplican las siguientes buenas prácticas en la gestión de servicios TI \parencite{sena2026servidores, sena2026redes}:
+	
+	\begin{itemize}
+		\item \textbf{Gestión de Incidentes y Mesa de Servicio (Service Desk):} Centralización de los reportes y peticiones de los usuarios a través de ServiceDesk Plus para ofrecer tiempos de respuesta medibles, priorizando la reducción del MTTR (Tiempo Medio de Reparación) y garantizando el cumplimiento de los SLA.
+		\item \textbf{Gestión Proactiva y Monitoreo de la Infraestructura:} Uso de herramientas de monitorización continua como Paessler PRTG y UpTimeRobot para identificar latencias, caídas de servicios y degradación de red antes de que afecten la operación de los agentes en el Contact Center.
+		\item \textbf{Gestión de Activos de TI (ITAM):} Trazabilidad y control del ciclo de vida del hardware (diademas, estaciones de trabajo) y licencias de software mediante Snipe-IT.
+		\item \textbf{Gestión de Ciberseguridad (SGSI):} Auditoría continua de bitácoras y logs, detección de vulnerabilidades e intrusiones mediante Wazuh (SIEM) y protección perimetral estricta con appliances Fortigate.
+		\item \textbf{Gestión de Parches y Mantenimiento Predictivo:} Automatización del despliegue de parches de seguridad y actualizaciones de software mediante Action1 para mitigar riesgos cibernéticos y operacionales.
+		\item \textbf{Control de Acceso y Gestión de Identidades (IAM):} Administración centralizada de credenciales de usuario, autenticación de red y políticas de seguridad (GPOs) mediante el Directorio Activo de Microsoft Windows Server.
+	\end{itemize}
+	
+	\section{Bitácora de Herramientas de Administración y Supervisión}
+	A continuación, se detalla la bitácora técnica de supervisión, en cumplimiento de los criterios de desempeño sobre infraestructura TI, herramientas de administración y gestión bajo demanda. La información a continuación es suministrada al equipo de trabajo por \textbf{José Roberto Pérez Cano} bajo el rol de Analista de Soporte de Bases de Datos y Aplicaciones adscrito al área de IT de la empresa.
+	
+	\vspace{0.3cm}
+	\noindent\textbf{Datos Generales de la Bitácora:}
+	\begin{itemize}
+		\item \textbf{Nombre de la organización:} Alliance Technology Group (Contact Center BPO)
+		\item \textbf{Nombres de los aprendices:} Angie Paola Sepúlveda Moreno, Jhon Octavio Parra Martínez, John Jairo Duarte Aponte, Jorge Andrés Castellanos Soler, José Roberto Pérez Cano
+		\item \textbf{Fecha de registro:} 25 de agosto de 2026
+		\item \textbf{Área o dependencia de la organización:} Área de Sistemas o IT Department (Nombre Oficial Institucional)
+	\end{itemize}
+	
+	\vspace{0.5cm}
+	\noindent
+	\begin{tabularx}{\textwidth}{|p{3cm}|X|X|}
+		\hline
+		\textbf{Herramienta} & \textbf{Descripción Técnica (Servicio / Plataforma)} & \textbf{Funciones de Administración y Supervisión Asignadas} \\ \hline
+		\textbf{Fortigate} & Firewall de Próxima Generación (NGFW) y gestión unificada de amenazas perimetrales. & Supervisión y control del ancho de banda, configuración de VPNs para agentes en teletrabajo, bloqueo de intrusiones (IPS), filtrado de contenido web y detección de malware de borde. \\ \hline
+		\textbf{ServiceDesk Plus} & Software especializado de Mesa de Ayuda (Help Desk) y Gestión de Servicios (ITSM). & Recepción, categorización y seguimiento de tickets de soporte técnico, gestión del catálogo de servicios, cumplimiento de SLA y métricas de rendimiento por agente de soporte. \\ \hline
+		\textbf{Snipe-IT} & Sistema Open Source para la gestión y seguimiento de activos de TI (ITAM). & Administración rigurosa del inventario físico (PCs, monitores, periféricos) y lógico (licencias), control de asignaciones, mantenimientos realizados y seguimiento de garantías. \\ \hline
+		\textbf{Wazuh} & Plataforma SIEM (Security Information and Event Management) y XDR. & Recolección centralizada de logs, monitoreo de integridad de archivos críticos, detección de rootkits, escaneo de vulnerabilidades y alertas automatizadas ante posibles brechas de seguridad. \\ \hline
+		\textbf{Directorio Activo (Active Directory)} & Servicio de directorio de Microsoft Windows Server para gestión de redes de dominio. & Gestión centralizada del ciclo de vida de identidades, autenticación, agrupación de perfiles por áreas y despliegue masivo de políticas de seguridad restrictivas (GPO) en estaciones. \\ \hline
+		\textbf{Action1} & Plataforma basada en la nube para la gestión de endpoints y despliegue de parches (RMM). & Inventariado de software, despliegue forzado de actualizaciones del SO y terceros, ejecución remota de scripts de corrección y soporte remoto de bajo nivel a los equipos. \\ \hline
+		\textbf{UpTimeRobot} & Herramienta SaaS (Software as a Service) para el monitoreo del tiempo de actividad web. & Supervisión continua cada minuto de portales críticos (CRM, pasarelas SIP), APIs y sitios externos, emitiendo alertas inmediatas por correo/SMS ante caídas para una rápida contingencia. \\ \hline
+		\textbf{Paessler PRTG} & Software integral de monitorización y sensores de infraestructura de red unificada. & Supervisión del estado de salud de los servidores (uso de CPU, RAM, espacio en discos), sensores de latencia, monitorización de tráfico en switches y disponibilidad de los recursos LAN/WAN. \\ \hline
+	\end{tabularx}
+	\vspace{0.5cm}
+	
+	\section{Conclusiones}
+	La consolidación y ejecución de esta bitácora demuestra que Alliance Technology Group posee un esquema maduro de administración TI, abarcando eficientemente desde la mesa de servicio hasta la ciberseguridad perimetral. La utilización conjunta e integrada de estas ocho herramientas permite a la organización no solo reaccionar rápidamente ante incidentes reportados en ServiceDesk Plus o las alertas de caída en PRTG y UpTimeRobot, sino también aplicar un enfoque estructurado de carácter preventivo a través de Wazuh, Fortigate y Action1. Esto asegura, en definitiva, una alta tolerancia a fallos, confiabilidad técnica y confidencialidad total sobre la información de las diferentes campañas \parencite{sena2026servidores}.
+	
+	\nocite{*} 
+	\printbibliography[title={Referencias}]
+	
+\end{document}

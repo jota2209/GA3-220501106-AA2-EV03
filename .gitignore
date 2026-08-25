@@ -1,0 +1,16 @@
+# Ficheros de compilación LaTex y pdf generado
+*.pdf
+*.out
+*log
+*.aux
+*gz
+*.toc
+*nav
+*snm
+
+#Ficheros autogenerados de bibliografía
+*-blx.bib
+*.bbl
+*.bcf
+*.blg
+*.run.xml
