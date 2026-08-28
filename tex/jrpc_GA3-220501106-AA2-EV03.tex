@@ -42,10 +42,11 @@
 	
 	\vspace{0.5cm}
 	\noindent
-	\begin{tabularx}{\textwidth}{|p{3cm}|X|X|}
+	\begin{tabularx}{\textwidth}{|p{3.5cm}|X|X|}
 		\hline
 		\textbf{Herramienta} & \textbf{Descripción Técnica (Servicio / Plataforma)} & \textbf{Funciones de Administración y Supervisión Asignadas} \\ \hline
 		\textbf{Fortigate} & Firewall de Próxima Generación (NGFW) y gestión unificada de amenazas perimetrales. & Supervisión y control del ancho de banda, configuración de VPNs para agentes en teletrabajo, bloqueo de intrusiones (IPS), filtrado de contenido web y detección de malware de borde. \\ \hline
+		\textbf{Sophos} & Solución de seguridad endpoint y red. & Gestión de antivirus, detección y respuesta para puntos finales, y protección avanzada contra ransomware e intrusiones. \\ \hline
 		\textbf{ServiceDesk Plus} & Software especializado de Mesa de Ayuda (Help Desk) y Gestión de Servicios (ITSM). & Recepción, categorización y seguimiento de tickets de soporte técnico, gestión del catálogo de servicios, cumplimiento de SLA y métricas de rendimiento por agente de soporte. \\ \hline
 		\textbf{Snipe-IT} & Sistema Open Source para la gestión y seguimiento de activos de TI (ITAM). & Administración rigurosa del inventario físico (PCs, monitores, periféricos) y lógico (licencias), control de asignaciones, mantenimientos realizados y seguimiento de garantías. \\ \hline
 		\textbf{Wazuh} & Plataforma SIEM (Security Information and Event Management) y XDR. & Recolección centralizada de logs, monitoreo de integridad de archivos críticos, detección de rootkits, escaneo de vulnerabilidades y alertas automatizadas ante posibles brechas de seguridad. \\ \hline
@@ -53,11 +54,25 @@
 		\textbf{Action1} & Plataforma basada en la nube para la gestión de endpoints y despliegue de parches (RMM). & Inventariado de software, despliegue forzado de actualizaciones del SO y terceros, ejecución remota de scripts de corrección y soporte remoto de bajo nivel a los equipos. \\ \hline
 		\textbf{UpTimeRobot} & Herramienta SaaS (Software as a Service) para el monitoreo del tiempo de actividad web. & Supervisión continua cada minuto de portales críticos (CRM, pasarelas SIP), APIs y sitios externos, emitiendo alertas inmediatas por correo/SMS ante caídas para una rápida contingencia. \\ \hline
 		\textbf{Paessler PRTG} & Software integral de monitorización y sensores de infraestructura de red unificada. & Supervisión del estado de salud de los servidores (uso de CPU, RAM, espacio en discos), sensores de latencia, monitorización de tráfico en switches y disponibilidad de los recursos LAN/WAN. \\ \hline
+		\textbf{Proxmox} & Entorno de virtualización de código abierto. & Administración de máquinas virtuales (VMs) y contenedores Linux (LXC), gestión de clústeres, almacenamiento y copias de seguridad. \\ \hline
+		\textbf{Docker} & Plataforma de contenedores. & Creación, despliegue y ejecución de aplicaciones en contenedores aislados, optimizando la portabilidad y la eficiencia de los recursos. \\ \hline
+		\textbf{Portainer} & Herramienta de gestión de contenedores con interfaz gráfica. & Supervisión y administración centralizada de contenedores Docker, imágenes y redes, simplificando el despliegue y mantenimiento de los servicios virtualizados. \\ \hline
+		\textbf{Git / GitHub} & Sistema de control de versiones distribuido y plataforma de alojamiento. & Seguimiento de cambios en el código y archivos de configuración, colaboración en equipo y automatización de despliegues (CI/CD). \\ \hline
+		\textbf{NGINX Proxy Manager} & Interfaz de administración para proxies inversos basados en NGINX. & Gestión del enrutamiento de tráfico web hacia diferentes servicios internos, configuración de certificados SSL/TLS y control de acceso. \\ \hline
 	\end{tabularx}
 	\vspace{0.5cm}
 	
 	\section{Conclusiones}
-	La consolidación y ejecución de esta bitácora demuestra que Alliance Technology Group posee un esquema maduro de administración TI, abarcando eficientemente desde la mesa de servicio hasta la ciberseguridad perimetral. La utilización conjunta e integrada de estas ocho herramientas permite a la organización no solo reaccionar rápidamente ante incidentes reportados en ServiceDesk Plus o las alertas de caída en PRTG y UpTimeRobot, sino también aplicar un enfoque estructurado de carácter preventivo a través de Wazuh, Fortigate y Action1. Esto asegura, en definitiva, una alta tolerancia a fallos, confiabilidad técnica y confidencialidad total sobre la información de las diferentes campañas \parencite{sena2026servidores}.
+	La consolidación y ejecución de esta bitácora demuestra que Alliance Technology Group posee un esquema maduro de administración TI, abarcando eficientemente desde la mesa de servicio hasta la ciberseguridad perimetral y la gestión de infraestructura moderna. La utilización conjunta e integrada de estas herramientas permite a la organización reaccionar rápidamente ante incidentes, aplicar un enfoque estructurado de carácter preventivo y asegurar una alta tolerancia a fallos, confiabilidad técnica y confidencialidad total sobre la información de las diferentes campañas \parencite{sena2026servidores}.
+	
+	Además, la implementación de estas buenas prácticas y herramientas permite concluir lo siguiente \parencite{sena2026servidores, sena2026redes}:
+	
+	\begin{itemize}
+		\item \textbf{Mejora en los Niveles de Servicio:} El monitoreo constante con herramientas como PRTG y UpTimeRobot facilita el cálculo preciso de indicadores como el MTTR (Tiempo Medio de Reparación) y el MTBF (Tiempo Medio Entre Fallas). Un MTTR bajo garantiza que el equipo de TI responda rápidamente a los incidentes, mientras que un MTBF alto refleja la fiabilidad de los activos y la eficacia de los mantenimientos.
+		\item \textbf{Mantenimiento Predictivo Eficaz:} La supervisión y análisis de datos permiten implementar planes de mantenimiento preventivo y prescriptivo. Esto disminuye los costos operativos, prolonga la vida útil de los equipos y reduce significativamente los tiempos de inactividad imprevistos, minimizando el impacto en la operación del Contact Center.
+		\item \textbf{Agilidad y Eficiencia con Contenedores:} El uso de plataformas como Docker y Portainer aporta agilidad, seguridad y menor sobrecarga al sistema. Al virtualizar a nivel del sistema operativo, se facilita el desarrollo, despliegue y actualización de aplicaciones, optimizando los recursos de hardware y garantizando una mayor eficiencia en los proyectos de TI.
+		\item \textbf{Beneficios del Cloud Computing:} La adopción de soluciones en la nube, gestionadas a través de la infraestructura descrita, brinda ventajas competitivas como alta disponibilidad, resiliencia ante desastres, seguridad reforzada de la información, y la capacidad de acceso remoto, factores críticos para el teletrabajo y la continuidad del negocio.
+	\end{itemize}
 	
 	\nocite{*} 
 	\printbibliography[title={Referencias}]
