@@ -12,9 +12,9 @@
 	
 	% --- INTRODUCCIÓN ---
 	\section{Introducción}
-	El presente documento constituye la bitácora de administración y supervisión de los servicios de Tecnologías de la Información (TI) para la empresa \textbf{Alliance Technology Group}, un BPO de Contact Center localizado en la ciudad de Cali, Valle del Cauca de alta exigencia operativa. En este tipo de organizaciones, la disponibilidad de los servicios, la ciberseguridad y la gestión eficiente de los incidentes son pilares fundamentales para garantizar la continuidad del negocio y el cumplimiento de los Acuerdos de Nivel de Servicio (SLA) establecidos con los diferentes clientes que contratan las campañas \parencite{sena2026redes}.
+	El presente documento constituye la bitácora de administración y supervisión de los servicios de Tecnologías de la Información (TI) para la empresa \textbf{Alliance Technology Group}, un BPO de Contact Center de alta exigencia operativa. En este tipo de organizaciones, la disponibilidad de los servicios, la ciberseguridad y la gestión eficiente de los incidentes son pilares fundamentales para garantizar la continuidad del negocio y el cumplimiento de los Acuerdos de Nivel de Servicio (SLA) establecidos con los diferentes clientes que contratan las campañas \parencite{sena2026redes}.
 	
-	Para lograr un control óptimo y mitigar los impactos negativos frente a cualquier eventualidad, el departamento de TI emplea un ecosistema robusto de herramientas tecnológicas (Fortigate, ServiceDesk Plus, Snipe-IT, Wazuh, Directorio Activo, Action1, UpTimeRobot y PRTG), las cuales permiten centralizar desde la monitorización del hardware y la red hasta la gestión de identidades y la mesa de ayuda \parencite{sena2026servidores}.
+	Para lograr un control óptimo y mitigar los impactos negativos frente a cualquier eventualidad, el departamento de TI emplea un ecosistema robusto de herramientas tecnológicas, las cuales permiten centralizar desde la monitorización del hardware y la red hasta la gestión de identidades y la mesa de ayuda \parencite{sena2026servidores}.
 	
 	\section{Identificación de Buenas Prácticas de Gestión de Servicios TI}
 	Alineados con estándares internacionales como ITIL y los principios de ciberseguridad corporativa, en Alliance Technology Group se aplican las siguientes buenas prácticas en la gestión de servicios TI \parencite{sena2026servidores, sena2026redes}:
@@ -23,10 +23,13 @@
 		\item \textbf{Gestión de Incidentes y Mesa de Servicio (Service Desk):} Centralización de los reportes y peticiones de los usuarios a través de ServiceDesk Plus para ofrecer tiempos de respuesta medibles, priorizando la reducción del MTTR (Tiempo Medio de Reparación) y garantizando el cumplimiento de los SLA.
 		\item \textbf{Gestión Proactiva y Monitoreo de la Infraestructura:} Uso de herramientas de monitorización continua como Paessler PRTG y UpTimeRobot para identificar latencias, caídas de servicios y degradación de red antes de que afecten la operación de los agentes en el Contact Center.
 		\item \textbf{Gestión de Activos de TI (ITAM):} Trazabilidad y control del ciclo de vida del hardware (diademas, estaciones de trabajo) y licencias de software mediante Snipe-IT.
-		\item \textbf{Gestión de Ciberseguridad (SGSI):} Auditoría continua de bitácoras y logs, detección de vulnerabilidades e intrusiones mediante Wazuh (SIEM) y protección perimetral estricta con appliances Fortigate.
+		\item \textbf{Gestión de Ciberseguridad (SGSI):} Auditoría continua de bitácoras y logs, detección de vulnerabilidades e intrusiones mediante Wazuh (SIEM) y protección perimetral estricta con appliances Fortigate y Sophos.
 		\item \textbf{Gestión de Parches y Mantenimiento Predictivo:} Automatización del despliegue de parches de seguridad y actualizaciones de software mediante Action1 para mitigar riesgos cibernéticos y operacionales.
 		\item \textbf{Control de Acceso y Gestión de Identidades (IAM):} Administración centralizada de credenciales de usuario, autenticación de red y políticas de seguridad (GPOs) mediante el Directorio Activo de Microsoft Windows Server.
-	\end{itemize}
+		\item \textbf{Virtualización y Contenedores:} Uso de Proxmox para virtualización y Docker para el despliegue de contenedores, lo que asegura un uso eficiente de los recursos y agilidad en el despliegue \parencite{sena2026redes}.
+		\item \textbf{Control de Versiones:} Uso de Git/GitHub para la trazabilidad y gestión colaborativa del código y las configuraciones \parencite{sena2026redes}.
+		\item \textbf{Gestión de Tráfico Web:} Implementación de NGINX Proxy Manager para el enrutamiento y balanceo seguro de las aplicaciones expuestas a internet.
+		\end{itemize}
 	
 	\section{Bitácora de Herramientas de Administración y Supervisión}
 	A continuación, se detalla la bitácora técnica de supervisión, en cumplimiento de los criterios de desempeño sobre infraestructura TI, herramientas de administración y gestión bajo demanda. La información a continuación es suministrada al equipo de trabajo por \textbf{José Roberto Pérez Cano} bajo el rol de Analista de Soporte de Bases de Datos y Aplicaciones adscrito al área de IT de la empresa.
